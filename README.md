@@ -14,20 +14,21 @@ Run the AHK scritp with the AHK runtime
 ## Example:
 ***
 
-The Auto Shotgun Rifle
+#### The Auto Shotgun Rifle
 
-Source row: 1
+1. Source row: 1
 Source col: 1
 
-Ending row: 2
+2. Ending row: 2
 Ending col: 1
 
-Input field: A
+3. Input field: A
 
-After inputing these press OK
+4. After inputing these press OK
 
-Navigate where the shotgun is in at the Enclave
-Then press F2 to begin
+5. Navigate where the shotgun is in at the Enclave
+
+6. Then press F2 to begin
 
 
 #### Important
