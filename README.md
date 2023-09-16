@@ -1,5 +1,6 @@
 ## Usage
 ***
+
 Run the AHK scritp with the AHK runtime
  - Basicly if you have AutoHotkey installed, you just double click it. It should create a hidden tray icon with the AHK logo. That means it is running
 
@@ -12,7 +13,9 @@ Run the AHK scritp with the AHK runtime
 
 ## Example:
 ***
+
 The Auto Shotgun Rifle
+
 Source row: 1
 Source col: 1
 
