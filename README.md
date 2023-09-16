@@ -16,11 +16,9 @@ Run the AHK scritp with the AHK runtime
 
 #### The Auto Shotgun Rifle
 
-1. Source row: 1
-Source col: 1
+1. Source row: 1 , Source col: 1
 
-2. Ending row: 2
-Ending col: 1
+2. Ending row: 2 , Ending col: 1
 
 3. Input field: A
 
