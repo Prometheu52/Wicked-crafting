@@ -36,16 +36,18 @@ MyGui.AddButton("Default w80", "Debug").OnEvent("Click", ButtonClick)
 
 MyGui.Add("Text",,"-------------------------------------------------")
 
+MyGui.Add("Text",,"Input field")
 MovesRaw := MyGui.AddEdit("r1 Limit10 Uppercase -WantReturn")
 MyGui.AddButton("Default w40 x+10", "OK").OnEvent("Click", ReadInMoves)
 
 
-
+#Hotif WinActive("Destiny 2")
 ^1::{
 	MyGui.Show()
 	MyGui.Move(,,320, 400)
 }
 
+#Hotif WinActive("Destiny 2")
 F2::{
 	CPS := Integer(12)
 	INTERVAL := Integer(1000) / CPS
@@ -71,6 +73,10 @@ F2::{
 		Sleep INTERVAL
 		Click
 	}
+}
+
+^F2::{
+	ExitApp
 }
 
 

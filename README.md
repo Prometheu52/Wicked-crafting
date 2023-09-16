@@ -28,6 +28,8 @@ Run the AHK scritp with the AHK runtime
 
 6. Then press F2 to begin
 
+To exit, on the hidden tray icon right click -> exit
+
 
 #### Important
 
