@@ -1,7 +1,7 @@
 ﻿#SingleInstance Force
 #Requires AutoHotkey v2.0
 
-; MsgBox("Width: " A_ScreenWidth " Height: " A_ScreenHeight)
+; Made by Prometheu52, Enjoy :)
 
 FirstCardX := Integer(A_ScreenWidth * 0.46875)
 FirstCardY := Integer(A_ScreenHeight * 0.298611)
