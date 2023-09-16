@@ -34,3 +34,5 @@ Run the AHK scritp with the AHK runtime
 The script is not sucessful at 100% of the time. Limiting framerate or your connection is definitly helpful!
 
 Also, I have only tested it on a 2k display. In theory it should work on any display but without testing I can not be sure!
+
+If something seems off, check the values with the "Debug" button
