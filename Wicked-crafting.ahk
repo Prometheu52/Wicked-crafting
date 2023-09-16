@@ -11,8 +11,8 @@ ERow := 1
 ECol := 1
 Moves := []
 
-CardOffsetX := Integer(450)
-CardOffsetY := Integer(130)
+CardOffsetX := Integer(FirstCardX * 0.375)
+CardOffsetY := Integer(FirstCardY * 0.3023255)
 
 MyGui := Gui("+Resize","Wicked Crafting",)
 MyGui.Add("Text",,"Source Row: ")
