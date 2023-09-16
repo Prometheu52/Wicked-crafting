@@ -10,8 +10,8 @@ Run the AHK scritp with the AHK runtime
  - The "Ending" is the weapon you wnat to have the trait
  - The Inputbox at the bottom is where you put in characters to move the ingame menu
 
-#### Example:
-
+## Example:
+***
 The Auto Shotgun Rifle
 Source row: 1
 Source col: 1
