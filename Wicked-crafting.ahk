@@ -10,41 +10,47 @@ SCol := 1
 ERow := 1
 ECol := 1
 Moves := []
+Latency := 60
 
 CardOffsetX := Integer(FirstCardX * 0.375)
 CardOffsetY := Integer(FirstCardY * 0.3023255)
 
 MyGui := Gui("+Resize","Wicked Crafting",)
 MyGui.Add("Text",,"Source Row: ")
-MyGui.AddEdit()
+MyGui.AddEdit().OnEvent("Change", SRowChanged)
 MyGui.AddUpDown("Range1-5 Wrap", 1).OnEvent("Change", SRowChanged)
 
 MyGui.Add("Text",,"Source Col: ")
-MyGui.AddEdit()
+MyGui.AddEdit().OnEvent("Change", SColChanged)
 MyGui.AddUpDown("Range1-5 Wrap", 1).OnEvent("Change", SColChanged)
 
 MyGui.Add("Text",,"-------------------------------------------------")
 
 MyGui.Add("Text",,"Ending Row: ")
-MyGui.AddEdit()
+MyGui.AddEdit().OnEvent("Change", ERowChanged)
 MyGui.AddUpDown("Range1-5 Wrap", 1).OnEvent("Change", ERowChanged)
 MyGui.Add("Text",,"Ending Col: ")
-MyGui.AddEdit()
+MyGui.AddEdit().OnEvent("Change", EColChanged)
 MyGui.AddUpDown("Range1-5 Wrap", 1).OnEvent("Change", EColChanged)
-
-MyGui.AddButton("Default w80", "Debug").OnEvent("Click", ButtonClick)
 
 MyGui.Add("Text",,"-------------------------------------------------")
 
 MyGui.Add("Text",,"Input field")
 MovesRaw := MyGui.AddEdit("r1 Limit10 Uppercase -WantReturn")
-MyGui.AddButton("Default w40 x+10", "OK").OnEvent("Click", ReadInMoves)
+MyGui.AddButton("w40 x+10", "OK").OnEvent("Click", ReadInMoves)
 
+MyGui.Add("Text","x10","-------------------------------------------------")
+
+MyGui.Add("Text",,"Keypress latency")
+MyGui.AddEdit("-WantReturn -WantCtrlA Number").OnEvent("Change", SetLatency)
+MyGui.AddUpDown("Range10-60 Wrap", 60).OnEvent("Change", SetLatency)
+
+MyGui.AddButton("w80", "Debug").OnEvent("Click", ButtonClick)
 
 #Hotif WinActive("Destiny 2")
 ^1::{
 	MyGui.Show()
-	MyGui.Move(,,320, 400)
+	MyGui.Move(,,320, 450)
 }
 
 #Hotif WinActive("Destiny 2")
@@ -61,14 +67,14 @@ F2::{
 	MouseMove SMoveX, SMoveY
 	Sleep 100
 	Click
+	
+	MouseMove EMoveX, EMoveY, 50
 
 	loop Moves.Length {
 		Send StrLower(Moves[A_Index])
-		Sleep 60
+		Sleep Integer(Latency)
 	}
 
-	MouseMove EMoveX, EMoveY, 50
-	;Sleep 10
 	Loop CPS {
 		Sleep INTERVAL
 		Click
@@ -80,6 +86,10 @@ F2::{
 }
 
 
+SetLatency(obj, info) {
+	global
+	Latency := obj.Value
+}
 
 ReadInMoves(*) {
 	global
@@ -112,9 +122,13 @@ EColChanged(obj, info) {
 ButtonClick(obj, info) {
 	MsgBox Format("Source: Row: {1} Col: {2} | End: Row: {3} Col: {4}", SRow, SCol, ERow, ECol)
 	MsgBox Join("->", Moves*)
+	MsgBox Format("Latency: {1}", Latency)
 }
 
 Join(sep, params*) {
+	if params.Length == 0 {
+		return "EMPTY"
+	}
     for index,param in params
         str .= param . sep
     return SubStr(str, 1, -StrLen(sep))
