@@ -30,6 +30,8 @@ Run the AHK scritp with the AHK runtime
 
 To exit, on the hidden tray icon right click -> exit
 
+The Keypress Latency is gives contol over how many ms should be between keypresses. The default value is 60. It is used for crafting weapons that needs to travel more than 4 keys. In that case set a higher FPS ingame, and lower the latency. This way the game can recognise more input.
+
 
 #### Important
 
