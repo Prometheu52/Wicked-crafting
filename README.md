@@ -1,8 +1,8 @@
 ## Usage
 ***
 
-Run the AHK scritp with the AHK runtime
- - Basicly if you have AutoHotkey installed, you just double click it. It should create a hidden tray icon with the AHK logo. That means it is running
+Run the AHK scritp with the AHK runtime or download the latest release!
+ - Basicly if you have AutoHotkey installed, you just double click it. It should create a hidden tray icon with the AHK logo. That means it is running.
 
 #### Input Latency feature
 
