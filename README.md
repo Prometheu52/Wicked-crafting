@@ -1,7 +1,7 @@
 ## !!DISCLAIMER!!
 ***
 
-This tool will probably not get you banned. Bungie's take on using scripts is: until it does not provide you any unfair advantage over other players is is considered allowed. In other words until the script is not removing the recoi from your gun and limiting your internet connection to have unlimited ults it is safe to use. Even, with that said use this tool at your own risk and resposibility!
+This tool will *probably* not get you banned (it's a non-zero-risk). Bungie's take on using scripts is: until it does not provide you any unfair advantage over other players is is considered allowed. In other words until the script is not removing the recoi from your gun and limiting your internet connection to have unlimited ults it is safe to use. Even, with that said use this tool at your own risk and resposibility!
 
 ## Usage
 ***
