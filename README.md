@@ -1,3 +1,8 @@
+## !!DISCLAIMER!!
+***
+
+This tool will probably not get you banned. Bungie's take on using scripts is: until it does not provide you any unfair advantage over other players is is considered allowed. In other words until the script is not removing the recoi from your gun and limiting your internet connection to have unlimited ults it is safe to use. Even, with that said use this tool at your own risk and resposibility!
+
 ## Usage
 ***
 
@@ -39,11 +44,12 @@ To exit, on the hidden tray icon right click -> exit
 The Keypress Latency is gives contol over how many ms should be between keypresses. The default value is 60. It is used for crafting weapons that needs to travel more than 4 keys. In that case set a higher FPS ingame, and lower the latency. This way the game can recognise more input.
 
 
-#### Important
+## Important
+***
 
 The script is not sucessful at 100% of the time. Limiting framerate or your connection is definitly helpful!
 
-Also, I have only tested it on a 2k display. In theory it should work on any display, but without testing I can not be sure!
+I have only tested it on a 2k display. In theory it should work on any display, but without testing I can not be sure!
 
 If something seems off, check the values with the "Debug" button
 
